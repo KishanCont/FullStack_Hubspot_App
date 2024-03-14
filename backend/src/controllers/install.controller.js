@@ -28,7 +28,7 @@ export const OAuthCallback = async (req, res) => {
       await saveRefreshTokenToMongo(refreshToken, orgId);
       await createDatabase(orgId);
 
-      res.redirect(`/success`);
+      return res.redirect("/success");
     } catch (error) {
       console.log(error);
     }

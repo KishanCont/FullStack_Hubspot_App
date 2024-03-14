@@ -21,7 +21,7 @@ export const webhookPayloadGetProducts = async (req, res) => {
     );
     console.log(JSON.stringify(apiResponse, null, 2));
 
-    res.status(200).send(apiResponse);
+    return res.status(200).send(apiResponse);
   } catch (e) {
     e.message === "HTTP request failed"
       ? console.error(JSON.stringify(e.response, null, 2))
@@ -42,6 +42,7 @@ export const webhookPostPayload = async (req, res) => {
       SubscriptionCreateRequest
     );
     console.log(JSON.stringify(apiResponse, null, 2));
+    return res.status(200).send(apiResponse);
   } catch (e) {
     e.message === "HTTP request failed"
       ? console.error(JSON.stringify(e.response, null, 2))

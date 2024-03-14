@@ -9,9 +9,7 @@ export const CRMCardDataFetch = async (req, res) => {
 
     // await saveTestData(record);
 
-    return res.status(200).json({
-      CRMCardData,
-    });
+    return res.status(200).json(CRMCardData);
     // return res.status(200).json({ record });
   } catch (error) {
     console.log(error.message);

@@ -1,8 +1,8 @@
-const hubspot = require("@hubspot/api-client");
+import { Client } from "@hubspot/api-client";
 
 import { HUBSPOT_API_KEY, HUBSPOT_APP_ID } from "../constants/index.js";
 
-const hubspotClient = new hubspot.Client({
+const hubspotClient = new Client({
   developerApiKey: HUBSPOT_API_KEY,
 });
 const appId = HUBSPOT_APP_ID;
